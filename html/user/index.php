@@ -43,8 +43,11 @@ function show_nav() {
     ";
     if ($no_computing) {
         echo "
-            XXX is a research project that uses volunteers
-            to do research in XXX.
+            ForestWatchers is a research project that uses volunteers
+            to do research in Deforestation Detection.
+            <br/>
+            <br/>
+            <h2><a href='bossa_apps.php'>Help us detecting deforested areas!</a></h2>
         ";
     } else {
         echo "
@@ -56,11 +59,7 @@ function show_nav() {
     }
     echo "
         <p>
-        XXX is based at 
-        [describe your institution, with link to web page]
-        <ul>
-        <li> [Link to page describing your research in detail]
-        <li> [Link to page listing project personnel, and an email address]
+        ForestWatchers is a joint effort of the <a href='http://www.inpe.br/'>Instituto Nacional de Pesquisas Espaciais (INPE)</a>, the <a href='http://www.unifesp.br/'>Universidade Federal de Sao Paulo (UNIFESP)</a> and the <a href='http://citizencyberscience.net'>Citizen Cyberscience Centre</a>.
         </ul>
         <h2 class=headline>Join ".PROJECT."</h2>
         <ul>
