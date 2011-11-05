@@ -18,17 +18,17 @@
 
 require_once("../inc/bossa.inc");
 
-// Bossa example #1.
-// Show the user an image and ask them to click on the ellipse
+// Bossa audition #1.
+// Show the user an image and ask them to answer if there is deforestation or no
 // This version does no replication.
 
 function job_show($job, $inst, $user) {
     $info = $job->get_opaque_data($job);
     $path = $info->path;
-    page_head("Find the Ellipse");
+    page_head("Deforested area");
     echo "
         <form method=get action=bossa_job_finished.php>
-        Click on the center of the ellipse.
+        Click on the center of the deforested area.
         If you don't see one, click here:
         <input type=submit name=submit value=None>
         <br><br>
@@ -46,9 +46,9 @@ function job_issued($job, $inst, $user) {
 function job_finished($job, $inst) {
     $response = null;
     if (get_str('submit', true)) {
-        $response->have_ellipse = 0;
+        $response->have_deforestation = 0;
     } else {
-        $response->have_ellipse = 1;
+        $response->have_deforestation = 1;
         $response->cx = get_int('pic_x');
         $response->cy = get_int('pic_y');
     }
@@ -66,10 +66,10 @@ function job_summary($job) {
 }
 
 function instance_summary($info) {
-    if ($info->have_ellipse) {
+    if ($info->have_deforestation) {
         return "($info->cx, $info->cy)";
     } else {
-        return "no ellipse";
+        return "no deforestation";
     }
 }
 
