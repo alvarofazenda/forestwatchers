@@ -9,7 +9,7 @@
 require_once("../inc/util.inc");
 
 $master_url = parse_config(get_config(), "<master_url>");
-define("PROJECT", "REPLACE WITH PROJECT NAME");
+define("PROJECT", "ForestWatchers");
 define("URL_BASE", $master_url);
 define("IMAGE_PATH", "../user_profile/images/");
 define("IMAGE_URL", "user_profile/images/");
