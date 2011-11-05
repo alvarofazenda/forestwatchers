@@ -66,7 +66,7 @@ function show_nav() {
     ";
     if ($no_computing) {
         echo "
-            <li> <a href=\"create_account_form.php\">Create an account</a>
+            <li> <a href=\"create_account_form.php\">".tra("Create an account")."</a>
         ";
     } else {
         echo "
@@ -95,9 +95,9 @@ function show_nav() {
     ";
     if ($no_computing) {
         echo "
-            <li><a href=\"bossa_apps.php\">Do work</a>
-            <li><a href=\"home.php\">Your account</a> - view stats, modify preferences
-            <li><a href=\"team.php\">Teams</a> - create or join a team
+            <li><a href=\"bossa_apps.php\">".tra("Do work")."</a>
+            <li><a href=\"home.php\">".tra("Your account")."</a> - view stats, modify preferences
+            <li><a href=\"team.php\">".tra("Teams")."</a> - create or join a team
         ";
     } else {
         echo "
@@ -113,11 +113,11 @@ function show_nav() {
         <h2 class=headline>".tra("Community")."</h2>
         <ul>
         <li><a href=\"profile_menu.php\">".tra("Profiles")."</a>
-        <li><a href=\"user_search.php\">User search</a>
+        <li><a href=\"user_search.php\">".tra("User search")."</a>
         <li><a href=\"forum_index.php\">".tra("Message boards")."</a>
         <li><a href=\"forum_help_desk.php\">".tra("Questions and Answers")."</a>
-        <li><a href=\"stats.php\">Statistics</a>
-        <li><a href=language_select.php>Languages</a>
+        <li><a href=\"stats.php\">".tra("Statistics")."</a>
+        <li><a href=language_select.php>".tra("Languages")."</a>
         </ul>
         </div>
     ";
@@ -185,7 +185,7 @@ if (!$stopped) {
 
 echo "
     <tr><td class=news>
-    <h2 class=headline>News</h2>
+    <h2 class=headline>".tra("News")."</h2>
     <p>
 ";
 include("motd.php");
